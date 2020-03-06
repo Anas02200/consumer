@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.test.Kadmin.entities.NotificationEntity;
 
 @RestController
-public class NotificationService {
+public class NotificationService implements SendNotificationI {
 
 	private final String expoUrl = "https://exp.host/--/api/v2/push/send";
 	private URI uri;
@@ -32,6 +32,10 @@ public class NotificationService {
 		headers.set("content-type","application/json");
 	}
 
+	/* (non-Javadoc)
+	 * @see com.test.Kadmin.services.SendNotificationI#SendNotification(com.test.Kadmin.entities.NotificationEntity)
+	 */
+	@Override
 	@GetMapping(value = "/send")
 	public String SendNotification(@RequestBody NotificationEntity notification) {
 		RestTemplate restTemplate = new RestTemplate();

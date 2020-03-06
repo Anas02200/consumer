@@ -12,3 +12,17 @@ spring:
       
     listener:
       missing-topics-fatal: false
+      
+      
+      
+spring.cloud.stream:
+  function.definition: recieve
+  
+  bindings:
+    recieve-in-0:
+      destination: rabitoo
+      group: myQ
+      binder: rabbit
+  
+#spring.application.name: rabbitmq-reciever
+  
