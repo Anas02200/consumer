@@ -23,6 +23,8 @@ spring.cloud.stream:
       destination: rabitoo
       group: myQ
       binder: rabbit
+ 
+        
   
 #spring.application.name: rabbitmq-reciever
   
