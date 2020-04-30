@@ -3,7 +3,7 @@ package com.test.Kadmin.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+
 public class NotificationEntity {
 	@Id
 	private String to;

@@ -15,12 +15,12 @@ public class Demo1Application {
 		SpringApplication.run(Demo1Application.class, args);
 	}
 	
-	@Bean
+	/*@Bean
 	CommandLineRunner start(UserRepo user) {
 		return args->{
-			user.save(new UserEntity("anaas", 15555));
+			user.save(UserEntity.builder().cardNumber("454545").name("ddd").token("ddd").build());
 		};
 		
 	}
-
+*/
 }

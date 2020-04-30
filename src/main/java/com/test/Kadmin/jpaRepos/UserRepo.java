@@ -5,9 +5,13 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.test.Kadmin.entities.UserEntity;
-@CrossOrigin(origins = "*")
-@RepositoryRestResource
-public interface UserRepo extends JpaRepository<UserEntity, String> {
+
+public interface UserRepo extends JpaRepository<UserEntity, Long> {
+
+
+    UserEntity findUserEntityByIdentityCardNumber(String identityCardNumber);
+
+    boolean existsUserEntityByIdentityCardNumberAndToken(String identityCardNumber,String token);
 
 
 	

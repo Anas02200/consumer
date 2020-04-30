@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.test.Kadmin.entities.NotificationEntity;
 
-public interface SendNotificationI {
+public interface SendNotificationService {
 
 	String SendNotification(NotificationEntity notification);
 
